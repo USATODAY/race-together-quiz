@@ -39,7 +39,7 @@ define(
             quiz.blnUseContext = false;
             quiz.blnShowAnswer = false;
             quiz.blnTimer = false;
-            quiz.numTimerValue = 30; //in seconds
+            quiz.numTimerValue = 15; //in seconds
             quiz.numCountdown = quiz.numTimerValue;
             quiz.numIntervalId = 0;
             if (quiz.staticSection.length > 0) {
@@ -197,7 +197,7 @@ define(
                     strHTMLQuizzes += '        <div class="question-content upcoming">';
                     strHTMLQuizzes += '            <div class="question-text">' + quiz.objData[index].questions[qindex].value + '</div>';
                     if (quiz.blnTimer) {
-                        strHTMLQuizzes += '            <div class="question-response show">0:30<div class="quiz-question-timer-sub">seconds left</div></div>';
+                        strHTMLQuizzes += '            <div class="question-response show">0:15<div class="quiz-question-timer-sub">seconds left</div></div>';
                     } else {
                         strHTMLQuizzes += '            <div class="question-response"></div>';
                     }
@@ -304,7 +304,9 @@ define(
                         quiz.strBackgroundURL = quiz.objData[quiz.currentQuiz].params[0].base_path + quiz.objData[quiz.currentQuiz].background;
                         quiz.checkOrientation();
                         Analytics.trackEvent('Play button click');
-                        setTimeout(quiz.startQuiz, 1500);
+                        // turn off delay
+                        // setTimeout(quiz.startQuiz, 1500);
+                        quiz.startQuiz();
                     }
                 });
             } else {
@@ -424,7 +426,9 @@ define(
                     quiz.arrResultsRange[rindex] = parseInt(quiz.objData[quiz.currentQuiz].results[rindex].range);
                     quiz.arrResultsShare[rindex] = quiz.objData[quiz.currentQuiz].results[rindex].share_text;
                 });
-                setTimeout(quiz.renderQuestion, 2000);
+                //turn off question delay 
+                //setTimeout(quiz.renderQuestion, 2000);
+                quiz.renderQuestion();
             } else {
                 quiz.arrProgressBars.removeClass().addClass("question-progress-inner");
                 quiz.objQuestionContent.removeClass("active").addClass("done");

@@ -20,7 +20,6 @@ html {
 }
 
 body, article.asset {
-  background: url(http://www.gannett-cdn.com/experiments/usatoday/2015/03/race-together-quiz/img/asfalt.png) top left #f6f6f6;
   bottom: 0;
   font-family: "Futura Today Normal", Arial,sans-serif;
   height: 100%;
@@ -29,6 +28,12 @@ body, article.asset {
   right: 0;
   top: 0;
   width: 100%;
+}
+
+article.asset {
+  background: url(http://www.gannett-cdn.com/experiments/usatoday/2015/03/race-together-quiz/img/black_pattern08.jpg) no-repeat center center fixed;
+  background-size: cover;
+
 }
 
 .group:after {
