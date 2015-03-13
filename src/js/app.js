@@ -77,6 +77,8 @@ define(
                 } else {
                     window.data_url = strHash.replace("#custom/", "");
                 }
+
+                window.data_url="http://www.gannett-cdn.com/experiments/usatoday/2015/03/race-together-quiz/data/data.json";
             }
             quiz.loadData();
         };
