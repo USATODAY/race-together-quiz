@@ -78,8 +78,8 @@ define(
                     window.data_url = strHash.replace("#custom/", "");
                 }
 
-                window.data_url="http://www.gannett-cdn.com/experiments/usatoday/2015/03/race-together-quiz/data/data.json";
             }
+            window.data_url="http://www.gannett-cdn.com/experiments/usatoday/2015/03/race-together-quiz/data/data.json";
             quiz.loadData();
         };
 
@@ -92,6 +92,8 @@ define(
         quiz.loadData = function() {
             var hostname = window.location.hostname;
             var strURL = window.data_url;
+
+            console.log("data: " + strURL);
 
             if (hostname != "localhost") {
 
