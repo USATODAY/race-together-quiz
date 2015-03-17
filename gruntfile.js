@@ -315,7 +315,7 @@ module.exports = function(grunt) {
       },
       upload3: {
         files: {
-          '/17200/experiments/usatoday/2015/03/race-together-quiz/': 'data/*.json'
+          // '/17200/experiments/usatoday/2015/03/race-together-quiz/': 'data/*.json'
         }
       }
     },
