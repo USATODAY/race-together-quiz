@@ -322,6 +322,7 @@ answer types
 .question-response {
   font-family: "Futura Today Bold", Arial,sans-serif;
   font-size: 1.5rem;
+  height: 2em;
   margin-bottom: 1rem;
   margin-top: 1rem;
   opacity: 0;
@@ -456,6 +457,16 @@ progress bar
       display: none !important;
     }
   }
+}
+
+@media (min-height: 850px) {
+    .question-progress-bar {
+        top: 825px;
+    }
+
+    .question-number {
+        top: calc(825px + 1rem);
+    }
 }
 
 .quiz.active .question-number {
